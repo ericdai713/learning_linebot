@@ -1,5 +1,4 @@
 # learning_linebot
-持續更新中
 
 隨意輸入可以呼叫出初始介面
 
