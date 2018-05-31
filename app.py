@@ -170,98 +170,122 @@ def handle_message(event):
 	if event.message.text == "1-1:(A)":
 		cell_list = wks.find(profile.display_name)
 		if not cell_list:
-			wks.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'1','0','0'])
 		else :
 			c1 = wks.cell('B'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks.cell('F'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(C)以上皆非'),message3])
 	elif event.message.text == "1-1:(B)":
 		cell_list = wks.find(profile.display_name)
 		if not cell_list:
-			wks.append_table(values=[profile.display_name,'','X ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks.append_table(values=[profile.display_name,'','X ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','1','0'])
 		else :
 			c1 = wks.cell('C'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks.cell('G'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(C)以上皆非'),message3])
 	elif event.message.text == "1-1:(C)":
 		cell_list = wks.find(profile.display_name)
 		if not cell_list:
-			wks.append_table(values=[profile.display_name,'','','O ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks.append_table(values=[profile.display_name,'','','O ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','0','1'])
 		else :
 			c1 = wks.cell('D'+str(cell_list[0].row))
 			c1.value='O '
+			c2 = wks.cell('H'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答對了!!恭喜~'),message3])
 	elif event.message.text == "1-2:(A)":
 		cell_list = wks2.find(profile.display_name)
 		if not cell_list:
-			wks2.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks2.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'1','0','0'])
 		else :
 			c1 = wks2.cell('B'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks2.cell('F'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(C)以上皆是'),message3])
 	elif event.message.text == "1-2:(B)":
 		cell_list = wks2.find(profile.display_name)
 		if not cell_list:
-			wks2.append_table(values=[profile.display_name,'','X ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks2.append_table(values=[profile.display_name,'','X ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','1','0'])
 		else :
 			c1 = wks2.cell('C'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks2.cell('G'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(C)以上皆是'),message3])
 	elif event.message.text == "1-2:(C)":
 		cell_list = wks2.find(profile.display_name)
 		if not cell_list:
-			wks2.append_table(values=[profile.display_name,'','','O ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks2.append_table(values=[profile.display_name,'','','O ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','0','1'])
 		else :
 			c1 = wks2.cell('D'+str(cell_list[0].row))
 			c1.value='O '
+			c2 = wks2.cell('H'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答對了!!恭喜~'),message3])
 	elif event.message.text == "1-3:(A)":
 		cell_list = wks3.find(profile.display_name)
 		if not cell_list:
-			wks3.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks3.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'1','0','0'])
 		else :
 			c1 = wks3.cell('B'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks3.cell('F'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)伺服器'),message3])
 	elif event.message.text == "1-3:(B)":
 		cell_list = wks3.find(profile.display_name)
 		if not cell_list:
-			wks3.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks3.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','1','0'])
 		else :
 			c1 = wks3.cell('C'+str(cell_list[0].row))
 			c1.value='O '
+			c2 = wks3.cell('G'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答對了!!恭喜~'),message3])
 	elif event.message.text == "1-3:(C)":
 		cell_list = wks3.find(profile.display_name)
 		if not cell_list:
-			wks3.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks3.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','0','1'])
 		else :
 			c1 = wks3.cell('D'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks3.cell('H'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)伺服器'),message3])
 	elif event.message.text == "1-4:(A)":
 		cell_list = wks4.find(profile.display_name)
 		if not cell_list:
-			wks4.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks4.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'1','0','0'])
 		else :
 			c1 = wks4.cell('B'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks4.cell('F'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)工作管理員'),message3])
 	elif event.message.text == "1-4:(B)":
 		cell_list = wks4.find(profile.display_name)
 		if not cell_list:
-			wks4.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks4.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','1','0'])
 		else :
 			c1 = wks4.cell('C'+str(cell_list[0].row))
 			c1.value='O '
+			c2 = wks4.cell('G'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答對了!!恭喜~'),message3])
 	elif event.message.text == "1-4:(C)":
 		cell_list = wks4.find(profile.display_name)
 		if not cell_list:
-			wks4.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks4.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','0','1'])
 		else :
 			c1 = wks4.cell('D'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks4.cell('H'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)工作管理員'),message3])
 	elif event.message.text == "課程一測驗":
 		cell_list = wks.find(profile.display_name)
@@ -384,74 +408,92 @@ def handle_message(event):
 	elif event.message.text == "2-1:(A)":
 		cell_list = wks5.find(profile.display_name)
 		if not cell_list:
-			wks5.append_table(values=[profile.display_name,'O ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks5.append_table(values=[profile.display_name,'O ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'1','0','0'])
 		else :
 			c1 = wks5.cell('B'+str(cell_list[0].row))
 			c1.value='O '
+			c2 = wks5.cell('F'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答對了!!恭喜~'),message3])
 	elif event.message.text == "2-1:(B)":
 		cell_list = wks5.find(profile.display_name)
 		if not cell_list:
-			wks5.append_table(values=[profile.display_name,'','X ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks5.append_table(values=[profile.display_name,'','X ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','1','0'])
 		else :
 			c1 = wks5.cell('C'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks5.cell('G'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(A)網路資源(URLs)擷取套件'),message3])
 	elif event.message.text == "2-1:(C)":
 		cell_list = wks5.find(profile.display_name)
 		if not cell_list:
-			wks5.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks5.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','0','1'])
 		else :
 			c1 = wks5.cell('D'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks5.cell('H'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(A)網路資源(URLs)擷取套件'),message3])
 	elif event.message.text == "2-2:(A)":
 		cell_list = wks6.find(profile.display_name)
 		if not cell_list:
-			wks6.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks6.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'1','0','0'])
 		else :
 			c1 = wks6.cell('B'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks6.cell('F'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)HTML剖析套件'),message3])
 	elif event.message.text == "2-2:(B)":
 		cell_list = wks6.find(profile.display_name)
 		if not cell_list:
-			wks6.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks6.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','1','0'])
 		else :
 			c1 = wks6.cell('C'+str(cell_list[0].row))
 			c1.value='O '
+			c2 = wks6.cell('G'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答對了!!恭喜~'),message3])
 	elif event.message.text == "2-2:(C)":
 		cell_list = wks6.find(profile.display_name)
 		if not cell_list:
-			wks6.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks6.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','0','1'])
 		else :
 			c1 = wks6.cell('D'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks6.cell('H'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)HTML剖析套件'),message3])
 	elif event.message.text == "2-3:(A)":
 		cell_list = wks7.find(profile.display_name)
 		if not cell_list:
-			wks7.append_table(values=[profile.display_name,'O ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks7.append_table(values=[profile.display_name,'O ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'1','0','0'])
 		else :
 			c1 = wks7.cell('B'+str(cell_list[0].row))
 			c1.value='O '
+			c2 = wks7.cell('F'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答對了!!恭喜~'),message3])
 	elif event.message.text == "2-3:(B)":
 		cell_list = wks7.find(profile.display_name)
 		if not cell_list:
-			wks7.append_table(values=[profile.display_name,'','X ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks7.append_table(values=[profile.display_name,'','X ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','1','0'])
 		else :
 			c1 = wks7.cell('C'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks7.cell('G'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(A)在命令提示字元安裝'),message3])
 	elif event.message.text == "2-3:(C)":
 		cell_list = wks7.find(profile.display_name)
 		if not cell_list:
-			wks7.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks7.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','0','1'])
 		else :
 			c1 = wks7.cell('D'+str(cell_list[0].row))
-			c1.value=' '
+			c1.value='X '
+			c2 = wks7.cell('H'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(A)在命令提示字元安裝'),message3])
 	elif event.message.text == "課程二測驗":
 		cell_list = wks5.find(profile.display_name)
@@ -547,26 +589,32 @@ def handle_message(event):
 	elif event.message.text == "3-1:(A)":
 		cell_list = wks8.find(profile.display_name)
 		if not cell_list:
-			wks8.append_table(values=[profile.display_name,'O ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks8.append_table(values=[profile.display_name,'O ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'1','0','0'])
 		else :
 			c1 = wks8.cell('B'+str(cell_list[0].row))
 			c1.value='O '
+			c2 = wks8.cell('F'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答對了!!恭喜~'),message3])
 	elif event.message.text == "3-1:(B)":
 		cell_list = wks8.find(profile.display_name)
 		if not cell_list:
-			wks8.append_table(values=[profile.display_name,'','X ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks8.append_table(values=[profile.display_name,'','X ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','1','0'])
 		else :
 			c1 = wks8.cell('C'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks8.cell('G'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(A)135'),message3])
 	elif event.message.text == "3-1:(C)":
 		cell_list = wks8.find(profile.display_name)
 		if not cell_list:
-			wks8.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks8.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','0','1'])
 		else :
 			c1 = wks8.cell('D'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks8.cell('H'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(A)135'),message3])
 	elif event.message.text == "課程三測驗":
 		profile = line_bot_api.get_profile(event.source.user_id)
@@ -605,98 +653,122 @@ def handle_message(event):
 	elif event.message.text == "4-1:(A)":
 		cell_list = wks9.find(profile.display_name)
 		if not cell_list:
-			wks9.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks9.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'1','0','0'])
 		else :
 			c1 = wks9.cell('B'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks9.cell('F'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)print(soup.text)'),message3])
 	elif event.message.text == "4-1:(B)":
 		cell_list = wks9.find(profile.display_name)
 		if not cell_list:
-			wks9.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks9.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','1','0'])
 		else :
 			c1 = wks9.cell('C'+str(cell_list[0].row))
 			c1.value='O '
+			c2 = wks9.cell('G'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答對了!!恭喜~'),message3])
 	elif event.message.text == "4-1:(C)":
 		cell_list = wks9.find(profile.display_name)
 		if not cell_list:
-			wks9.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks9.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','0','1'])
 		else :
 			c1 = wks9.cell('D'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks.cell('H'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)print(soup.text)'),message3])
 	elif event.message.text == "4-2:(A)":
 		cell_list = wks10.find(profile.display_name)
 		if not cell_list:
-			wks10.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks10.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'1','0','0'])
 		else :
 			c1 = wks10.cell('B'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks10.cell('F'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)字串string'),message3])
 	elif event.message.text == "4-2:(B)":
 		cell_list = wks10.find(profile.display_name)
 		if not cell_list:
-			wks10.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks10.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','1','0'])
 		else :
 			c1 = wks10.cell('C'+str(cell_list[0].row))
 			c1.value='O '
+			c2 = wks10.cell('G'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答對了!!恭喜~'),message3])
 	elif event.message.text == "4-2:(C)":
 		cell_list = wks10.find(profile.display_name)
 		if not cell_list:
-			wks10.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks10.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','0','1'])
 		else :
 			c1 = wks10.cell('D'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks10.cell('H'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)字串string'),message3])
 	elif event.message.text == "4-3:(A)":
 		cell_list = wks11.find(profile.display_name)
 		if not cell_list:
-			wks11.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks11.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'1','0','0'])
 		else :
 			c1 = wks11.cell('B'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks11.cell('F'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)#title'),message3])
 	elif event.message.text == "4-3:(B)":
 		cell_list = wks11.find(profile.display_name)
 		if not cell_list:
-			wks11.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks11.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','1','0'])
 		else :
 			c1 = wks11.cell('C'+str(cell_list[0].row))
 			c1.value='O '
+			c2 = wks11.cell('G'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答對了!!恭喜~'),message3])
 	elif event.message.text == "4-3:(C)":
 		cell_list = wks11.find(profile.display_name)
 		if not cell_list:
-			wks11.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks11.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','0','1'])
 		else :
 			c1 = wks11.cell('D'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks11.cell('H'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)#title'),message3])
 	elif event.message.text == "4-4:(A)":
 		cell_list = wks12.find(profile.display_name)
 		if not cell_list:
-			wks12.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks12.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'1','0','0'])
 		else :
 			c1 = wks12.cell('B'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks12.cell('F'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(C).link'),message3])
 	elif event.message.text == "4-4:(B)":
 		cell_list = wks12.find(profile.display_name)
 		if not cell_list:
-			wks12.append_table(values=[profile.display_name,'','X ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks12.append_table(values=[profile.display_name,'','X ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','1','0'])
 		else :
 			c1 = wks12.cell('C'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks12.cell('G'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(C).link'),message3])
 	elif event.message.text == "4-4:(C)":
 		cell_list = wks12.find(profile.display_name)
 		if not cell_list:
-			wks12.append_table(values=[profile.display_name,'','','O ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks12.append_table(values=[profile.display_name,'','','O ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','0','1'])
 		else :
 			c1 = wks12.cell('D'+str(cell_list[0].row))
 			c1.value='O '
+			c2 = wks12.cell('H'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答對了!!恭喜~'),message3])
 	elif event.message.text == "課程四測驗":
 		cell_list = wks9.find(profile.display_name)
@@ -819,26 +891,32 @@ def handle_message(event):
 	elif event.message.text == "5-1:(A)":
 		cell_list = wks13.find(profile.display_name)
 		if not cell_list:
-			wks13.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks13.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'1','0','0'])
 		else :
 			c1 = wks13.cell('B'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks13.cell('F'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)InfoLite'),message3])
 	elif event.message.text == "5-1:(B)":
 		cell_list = wks13.find(profile.display_name)
 		if not cell_list:
-			wks13.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks13.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','1','0'])
 		else :
 			c1 = wks13.cell('C'+str(cell_list[0].row))
 			c1.value='O '
+			c2 = wks13.cell('G'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答對了!!恭喜~'),message3])
 	elif event.message.text == "5-1:(C)":
 		cell_list = wks13.find(profile.display_name)
 		if not cell_list:
-			wks13.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks13.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','0','1'])
 		else :
 			c1 = wks13.cell('D'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks13.cell('H'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)InfoLite'),message3])
 	elif event.message.text == "課程五測驗":
 		profile = line_bot_api.get_profile(event.source.user_id)
@@ -877,50 +955,62 @@ def handle_message(event):
 	elif event.message.text == "6-1:(A)":
 		cell_list = wks14.find(profile.display_name)
 		if not cell_list:
-			wks14.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks14.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'1','0','0'])
 		else :
 			c1 = wks14.cell('B'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks14.cell('F'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)Post需要messagebody表單資料'),message3])
 	elif event.message.text == "6-1:(B)":
 		cell_list = wks14.find(profile.display_name)
 		if not cell_list:
-			wks14.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks14.append_table(values=[profile.display_name,'','O ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','1','0'])
 		else :
 			c1 = wks14.cell('C'+str(cell_list[0].row))
 			c1.value='O '
+			c2 = wks14.cell('G'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答對了!!恭喜~'),message3])
 	elif event.message.text == "6-1:(C)":
 		cell_list = wks14.find(profile.display_name)
 		if not cell_list:
-			wks14.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks14.append_table(values=[profile.display_name,'','','X ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','0','1'])
 		else :
 			c1 = wks14.cell('D'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks14.cell('H'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(B)Post需要messagebody表單資料'),message3])
 	elif event.message.text == "6-2:(A)":
 		cell_list = wks15.find(profile.display_name)
 		if not cell_list:
-			wks15.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks15.append_table(values=[profile.display_name,'X ','','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'1','0','0'])
 		else :
 			c1 = wks15.cell('B'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks15.cell('F'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(C)字典dictionary'),message3])
 	elif event.message.text == "2-2:(B)":
 		cell_list = wks15.find(profile.display_name)
 		if not cell_list:
-			wks15.append_table(values=[profile.display_name,'','X ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks15.append_table(values=[profile.display_name,'','X ','',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','1','0'])
 		else :
 			c1 = wks15.cell('C'+str(cell_list[0].row))
 			c1.value='X '
+			c2 = wks15.cell('G'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答錯囉~答案是(C)字典dictionary'),message3])
 	elif event.message.text == "6-2:(C)":
 		cell_list = wks15.find(profile.display_name)
 		if not cell_list:
-			wks15.append_table(values=[profile.display_name,'','','O ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S")])
+			wks15.append_table(values=[profile.display_name,'','','O ',datetime.datetime.now(tpe).strftime("%Y-%m-%d %H:%M:%S"),'0','0','1'])
 		else :
 			c1 = wks15.cell('D'+str(cell_list[0].row))
 			c1.value='O '
+			c2 = wks15.cell('H'+str(cell_list[0].row))
+			c2.value=str(int(c2.value)+1)
 		line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='答對了!!恭喜~'),message3])
 	elif event.message.text == "課程六測驗":
 		cell_list = wks14.find(profile.display_name)
