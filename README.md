@@ -24,6 +24,6 @@ linebot建置教學影片
 
 ![image](https://i.imgur.com/nS3PTUs.png)
 
-@iqc8044p
+加好友：@iqc8044p
 
 ![image](https://i.imgur.com/vgeKCZO.jpg)
