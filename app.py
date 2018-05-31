@@ -1015,7 +1015,7 @@ def handle_message(event):
 		profile = line_bot_api.get_profile(event.source.user_id)
 		line_bot_api.reply_message(event.reply_token, message3)
 	else:
-		line_bot_api.reply_message(event.reply_token, [message,TextSendMessage(text='加好友:@iqc8044p')])
+		line_bot_api.reply_message(event.reply_token, [message,TextSendMessage(text='加好友:@iqc8044p'),TextSendMessage(text='Github：https://github.com/ericdai713/learning_linebot')])
 
 if __name__ == "__main__":
 	app.run()
