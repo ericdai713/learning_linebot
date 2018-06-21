@@ -28,7 +28,7 @@ linebot建置教學影片
 
 ![image](https://i.imgur.com/Z3FDSJT.jpg)
 
-所有文字回答內容、觀看影片紀錄、筆記內容透過python requests php存到資料庫
+所有文字回答內容、觀看影片紀錄、筆記內容透過python requests php 或 網頁呼叫php 存到資料庫
 
 ![image](https://i.imgur.com/EQHM2so.jpg)
 
