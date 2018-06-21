@@ -26,7 +26,7 @@ linebot建置教學影片
 
 回答結果會傳到google sheets
 
-![image](https://i.imgur.com/aQw3toG.jpg)
+![image](https://i.imgur.com/Z3FDSJT.jpg)
 
 所有文字回答內容、觀看影片紀錄、筆記內容透過python requests php存到資料庫
 
