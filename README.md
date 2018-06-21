@@ -24,6 +24,14 @@ linebot建置教學影片
 
 ![image](https://i.imgur.com/nS3PTUs.png)
 
+回答結果會傳到google sheets
+
+![image](https://i.imgur.com/aQw3toG.jpg)
+
+所有文字回答內容、觀看影片紀錄、筆記內容透過python requests php存到資料庫
+
+![image](https://i.imgur.com/EQHM2so.jpg)
+
 加好友：@iqc8044p
 
 ![image](https://i.imgur.com/vgeKCZO.jpg)
